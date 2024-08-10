@@ -8,6 +8,8 @@ size = Vector2(22, 11)
 
 [node name="Coconut" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_pvvyj")
 speed = 100
 
