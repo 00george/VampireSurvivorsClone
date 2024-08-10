@@ -39,3 +39,7 @@ func _physics_process(delta):
 	move_and_slide()
 		
 
+func change_health(amount):
+	health += amount
+	%HealthBar.value = health
+
