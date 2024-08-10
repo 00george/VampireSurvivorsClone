@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://xmow6gw060md"]
+[gd_scene load_steps=6 format=3 uid="uid://xmow6gw060md"]
 
 [ext_resource type="Script" path="res://scenes/Game.gd" id="1_jxhqj"]
 [ext_resource type="PackedScene" uid="uid://4wi28h32t1vv" path="res://menus/menu.tscn" id="2_vy0pl"]
 [ext_resource type="PackedScene" uid="uid://buqg012hambeg" path="res://menus/options.tscn" id="3_8mkr8"]
 [ext_resource type="PackedScene" uid="uid://bruwnt7h47nl1" path="res://menus/pausemenu.tscn" id="4_h1w7m"]
+[ext_resource type="PackedScene" uid="uid://djnwh4ln4i0iq" path="res://menus/character_selection.tscn" id="5_14eef"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -30,6 +31,10 @@ visible = false
 layout_mode = 1
 
 [node name="Pausemenu" parent="CanvasLayer/MenusGroup" instance=ExtResource("4_h1w7m")]
+visible = false
+layout_mode = 1
+
+[node name="CharacterSelection" parent="CanvasLayer/MenusGroup" instance=ExtResource("5_14eef")]
 visible = false
 layout_mode = 1
 
