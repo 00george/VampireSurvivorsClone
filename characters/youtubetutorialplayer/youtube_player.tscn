@@ -30,9 +30,13 @@ properties/0/spawn = true
 properties/0/replication_mode = 1
 
 [node name="YoutubePlayer2D" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_oj41m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_aps2o")]
 unique_name_in_owner = true
