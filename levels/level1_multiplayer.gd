@@ -3,6 +3,7 @@ extends Node2D
 
 var peer = ENetMultiplayerPeer.new()
 @export var player_scene: PackedScene
+@export var ipBox : TextEdit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,5 +23,5 @@ func _add_player(id = 1):
 	call_deferred("add_child", player)
 
 func _on_join_pressed():
-	peer.create_client("localhost", 9090)
+	peer.create_client(ipBox.text, 9090)
 	multiplayer.multiplayer_peer = peer
