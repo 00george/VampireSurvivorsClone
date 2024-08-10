@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxag7nwtsrno5"]
+
+[ext_resource type="Script" path="res://enemies/ghost_mob.gd" id="1_2s7to"]
+[ext_resource type="Texture2D" uid="uid://dcudu5xxcejge" path="res://assets/sprites/kenney_tiny-dungeon/Tiles/tile_0121.png" id="1_4efiv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60jts"]
+size = Vector2(160, 151)
+
+[node name="Mob" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_2s7to")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("1_4efiv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_60jts")
