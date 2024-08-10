@@ -1,6 +1,6 @@
 extends Node
 
-
+@export var spawn_rate_multiplier = 0.99;
 var path_follow : PathFollow2D;
 var player
 var timer: Timer;
@@ -23,5 +23,5 @@ func spawn_mob():
 
 
 func _on_timer_timeout():
-	timer.wait_time *= 0.98;
+	timer.wait_time *= spawn_rate_multiplier;
 	spawn_mob()
