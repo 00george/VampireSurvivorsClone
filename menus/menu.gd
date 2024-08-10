@@ -12,7 +12,7 @@ func _process(delta):
 func _on_start_pressed():
 	print("Start pressed") # Replace with function body.
 	# TODO: Change to real path for first level/scene
-	# get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://levels/Level1.tscn")
 
 func _on_options_pressed():
 	print("Options pressed")

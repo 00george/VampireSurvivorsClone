@@ -23,4 +23,4 @@ func _on_options_pressed():
 
 func _on_exit_pressed():
 	print("Back pressed")
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://menus/menu.tscn")
