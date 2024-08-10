@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfdpd66mehkce"
-path="res://.godot/imported/Becky_Character_Sheet_96x96.png-b9cc8fdedb9ba0383a08427c49b11d17.ctex"
+uid="uid://c3l4jqqnwqki5"
+path="res://.godot/imported/00_Becky_Character_Sheet_96x96.png-51759dcb5425fb1d28925ad4a7795cef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Becky_Character_Sheet_96x96.png"
-dest_files=["res://.godot/imported/Becky_Character_Sheet_96x96.png-b9cc8fdedb9ba0383a08427c49b11d17.ctex"]
+source_file="res://assets/becky_player/00_Becky_Character_Sheet_96x96.png"
+dest_files=["res://.godot/imported/00_Becky_Character_Sheet_96x96.png-51759dcb5425fb1d28925ad4a7795cef.ctex"]
 
 [params]
 

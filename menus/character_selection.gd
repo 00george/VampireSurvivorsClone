@@ -1,11 +1,16 @@
 extends Control
 
 const characters = ['George', 'Becky']
-const sprite_path = "res://assets/sprites/happy_boo/square_ref.png"
+const icon_animated_sprite_paths = {
+	'Becky': "res://assets/becky_player/character_selection.tres",
+}  
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for character in characters:
-		%CharacterList.add_item(character, load("res://assets/sprites/happy_boo/square_ref.png"))
+		print(character)
+		print(icon_animated_sprite_paths.get(character))
+		%CharacterList.add_item(character, load(icon_animated_sprite_paths.get(character, "res://assets/sprites/happy_boo/square_ref.png")))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

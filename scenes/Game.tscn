@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://4wi28h32t1vv" path="res://menus/menu.tscn" id="2_vy0pl"]
 [ext_resource type="PackedScene" uid="uid://buqg012hambeg" path="res://menus/options.tscn" id="3_8mkr8"]
 [ext_resource type="PackedScene" uid="uid://bruwnt7h47nl1" path="res://menus/pausemenu.tscn" id="4_h1w7m"]
-[ext_resource type="PackedScene" uid="uid://djnwh4ln4i0iq" path="res://menus/character_selection.tscn" id="5_14eef"]
+[ext_resource type="PackedScene" uid="uid://djnwh4ln4i0iq" path="res://menus/character_selection.tscn" id="5_5s1rn"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -34,7 +34,7 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[node name="CharacterSelection" parent="CanvasLayer/MenusGroup" instance=ExtResource("5_14eef")]
+[node name="CharacterSelection" parent="CanvasLayer/MenusGroup" instance=ExtResource("5_5s1rn")]
 visible = false
 layout_mode = 1
 
