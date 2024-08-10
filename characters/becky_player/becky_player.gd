@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal health_depleted
 
 var health = 100.0
+var experience = 0.0
 var animatedSprite: AnimatedSprite2D;
 @export var main_menu_scene: PackedScene
 
@@ -43,3 +44,5 @@ func change_health(amount):
 	health += amount
 	%HealthBar.value = health
 
+func gain_xp(amount):
+	experience += amount

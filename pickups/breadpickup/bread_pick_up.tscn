@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://0sghoumn2dyh"]
+
+[ext_resource type="Script" path="res://pickups/breadpickup/bread_pick_up.gd" id="1_rqlgw"]
+[ext_resource type="PackedScene" uid="uid://dvsnlacpdg2ak" path="res://pickups/breadpickup/bread.tscn" id="2_k82cj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_26u48"]
+radius = 18.0
+
+[node name="Bread Pick Up" type="Node2D"]
+script = ExtResource("1_rqlgw")
+
+[node name="Bread" parent="." instance=ExtResource("2_k82cj")]
+
+[node name="Bread Pick up Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bread Pick up Collision"]
+shape = SubResource("CircleShape2D_26u48")
+
+[connection signal="body_entered" from="Bread Pick up Collision" to="." method="_on_bread_pick_up_collision_body_entered"]
