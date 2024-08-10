@@ -1,21 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://df0m2ucrtuuqs"]
+[gd_scene load_steps=4 format=3 uid="uid://df0m2ucrtuuqs"]
 
 [ext_resource type="PackedScene" uid="uid://cm3vfo8v1nxfg" path="res://characters/youtubetutorialplayer/youtube_player.tscn" id="1_j5dnn"]
-[ext_resource type="PackedScene" uid="uid://dxag7nwtsrno5" path="res://enemies/ghost_mob.tscn" id="2_h1hor"]
+[ext_resource type="Script" path="res://levels/Level1.gd" id="1_qk0e7"]
+
+[sub_resource type="Curve2D" id="Curve2D_0mkpr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -4164, -2616, 0, 0, 0, 0, 6317, -2489, 0, 0, 0, 0, 6303, 2480, 0, 0, 0, 0, -4182, 2476, 0, 0, 0, 0, -4164, -2616)
+}
+point_count = 5
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_qk0e7")
 
 [node name="YoutubePlayer2D" parent="." instance=ExtResource("1_j5dnn")]
 position = Vector2(580, 363)
 
-[node name="Mob" parent="." instance=ExtResource("2_h1hor")]
-position = Vector2(853, -2516)
+[node name="Path2D" type="Path2D" parent="YoutubePlayer2D"]
+curve = SubResource("Curve2D_0mkpr")
 
-[node name="Mob2" parent="." instance=ExtResource("2_h1hor")]
-position = Vector2(-3819, 4560)
+[node name="PathFollow2D" type="PathFollow2D" parent="YoutubePlayer2D/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-4164, -2616)
+rotation = 0.0121166
 
-[node name="Mob3" parent="." instance=ExtResource("2_h1hor")]
-position = Vector2(11228, 6089)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.294
+autostart = true
 
-[node name="Mob4" parent="." instance=ExtResource("2_h1hor")]
-position = Vector2(19589, -2217)
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
