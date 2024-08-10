@@ -16,3 +16,5 @@ shape = SubResource("RectangleShape2D_xadmh")
 [node name="HappyBoo" parent="CollisionShape2D" instance=ExtResource("2_aps2o")]
 unique_name_in_owner = true
 position = Vector2(2.5, 37.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
