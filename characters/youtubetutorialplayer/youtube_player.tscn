@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cm3vfo8v1nxfg"]
+[gd_scene load_steps=9 format=3 uid="uid://cm3vfo8v1nxfg"]
 
 [ext_resource type="Script" path="res://characters/youtubetutorialplayer/youtube_player.gd" id="1_oj41m"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://assets/sprites/happy_boo/happy_boo.tscn" id="2_aps2o"]
@@ -23,6 +23,11 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rd1jn"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="YoutubePlayer2D" type="CharacterBody2D"]
 script = ExtResource("1_oj41m")
@@ -56,3 +61,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_u3a15")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dqv18")
 value = 100.0
 show_percentage = false
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rd1jn")
