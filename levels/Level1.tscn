@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://df0m2ucrtuuqs"]
+[gd_scene load_steps=3 format=3 uid="uid://df0m2ucrtuuqs"]
+
+[ext_resource type="PackedScene" uid="uid://s1jml6r4isb" path="res://characters/george/player_george.tscn" id="1_cprtq"]
+[ext_resource type="PackedScene" uid="uid://dxag7nwtsrno5" path="res://enemies/ghost_mob.tscn" id="2_h1hor"]
 
 [node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_cprtq")]
+position = Vector2(4767, -682)
+
+[node name="Mob" parent="." instance=ExtResource("2_h1hor")]
+position = Vector2(853, -2516)
+
+[node name="Mob2" parent="." instance=ExtResource("2_h1hor")]
+position = Vector2(-3819, 4560)
+
+[node name="Mob3" parent="." instance=ExtResource("2_h1hor")]
+position = Vector2(11228, 6089)
+
+[node name="Mob4" parent="." instance=ExtResource("2_h1hor")]
+position = Vector2(19589, -2217)
