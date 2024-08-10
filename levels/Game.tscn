@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://xmow6gw060md"]
+
+[ext_resource type="Script" path="res://levels/Game.gd" id="1_3g66b"]
+[ext_resource type="PackedScene" uid="uid://4wi28h32t1vv" path="res://ui/menu.tscn" id="2_loh1i"]
+[ext_resource type="PackedScene" uid="uid://buqg012hambeg" path="res://ui/options.tscn" id="3_q0lsp"]
+[ext_resource type="PackedScene" uid="uid://bruwnt7h47nl1" path="res://ui/pausemenu.tscn" id="4_7o3dt"]
+[ext_resource type="PackedScene" uid="uid://djnwh4ln4i0iq" path="res://ui/character_selection.tscn" id="5_dws6p"]
+
+[node name="Game" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_3g66b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenusGroup" type="Control" parent="CanvasLayer" groups=["MenusGroup"]]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Menu" parent="CanvasLayer/MenusGroup" instance=ExtResource("2_loh1i")]
+unique_name_in_owner = true
+process_mode = 2
+layout_mode = 1
+
+[node name="Options" parent="CanvasLayer/MenusGroup" instance=ExtResource("3_q0lsp")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+layout_mode = 1
+
+[node name="Pausemenu" parent="CanvasLayer/MenusGroup" instance=ExtResource("4_7o3dt")]
+visible = false
+layout_mode = 1
+
+[node name="CharacterSelection" parent="CanvasLayer/MenusGroup" instance=ExtResource("5_dws6p")]
+visible = false
+layout_mode = 1
+
+[node name="LevelsGroup" type="Node2D" parent="." groups=["LevelsGroup"]]
+unique_name_in_owner = true
+process_mode = 1
