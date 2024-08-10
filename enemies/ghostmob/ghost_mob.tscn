@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxnh12adf8srk"]
 
-[ext_resource type="Script" path="res://enemies/static_enemy.gd" id="1_edngf"]
+[ext_resource type="Script" path="res://enemies/basic_enemy.gd" id="1_edngf"]
 [ext_resource type="Texture2D" uid="uid://dcudu5xxcejge" path="res://assets/sprites/kenney_tiny-dungeon/Tiles/tile_0121.png" id="2_l6euj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bbyh"]

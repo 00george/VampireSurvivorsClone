@@ -1,28 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://f76mgc8sw5dr"]
+[gd_scene load_steps=10 format=3 uid="uid://f76mgc8sw5dr"]
 
-[ext_resource type="Texture2D" uid="uid://dnlr8lsxnwoxn" path="res://assets/sprites/enemies/snake.png" id="1_ehyac"]
-[ext_resource type="Script" path="res://enemies/static_enemy.gd" id="1_xhvxc"]
+[ext_resource type="Script" path="res://enemies/basic_enemy.gd" id="1_773ko"]
+[ext_resource type="Texture2D" uid="uid://cwa8f37t5bpae" path="res://assets/sprites/enemies/Snake_Right_96x96.png" id="2_cag5p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tprm"]
+atlas = ExtResource("2_cag5p")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cwbh"]
+atlas = ExtResource("2_cag5p")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otut0"]
+atlas = ExtResource("2_cag5p")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwibr"]
+atlas = ExtResource("2_cag5p")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyf11"]
+atlas = ExtResource("2_cag5p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juxv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tprm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cwbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otut0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwibr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyf11")
+}],
+"loop": true,
+"name": &"move",
+"speed": 7.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ncc8"]
 radius = 5.0
-height = 28.0035
+height = 22.0027
 
 [node name="Snake" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_xhvxc")
+script = ExtResource("1_773ko")
 health = 1
-speed = 130
+speed = 120
 
-[node name="sprite" type="Sprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(0, -16)
-texture = ExtResource("1_ehyac")
+sprite_frames = SubResource("SpriteFrames_juxv5")
+animation = &"move"
+autoplay = "move"
+frame_progress = 0.235705
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(0, 8)
 rotation = 1.5708
 skew = 0.015708
 shape = SubResource("CapsuleShape2D_2ncc8")

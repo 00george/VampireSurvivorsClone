@@ -125,7 +125,6 @@ _data = {
 point_count = 5
 
 [node name="YoutubePlayer2D" type="CharacterBody2D"]
-z_index = 1
 y_sort_enabled = true
 script = ExtResource("1_oj41m")
 main_menu_scene = ExtResource("2_c02iw")
@@ -162,6 +161,7 @@ value = 100.0
 show_percentage = false
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tbfw0")
 animation = &"idle_down"

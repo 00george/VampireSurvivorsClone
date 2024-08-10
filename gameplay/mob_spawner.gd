@@ -18,8 +18,8 @@ func spawn_mob():
 	path_follow.progress_ratio = randf()
 	coconut_mob.global_position = path_follow.global_position
 	snake_mob.global_position = path_follow.global_position
-	add_child(coconut_mob)
-	add_child(snake_mob)
+	get_parent().add_child(coconut_mob)
+	get_parent().add_child(snake_mob)
 
 
 func _on_timer_timeout():
