@@ -11,11 +11,10 @@ func _process(delta):
 
 func _on_start_pressed():
 	print("Start pressed") # Replace with function body.
-	# Instantiate first level and add to 'LevelsGroup' 2D Node
-	for menu_node in get_tree().get_first_node_in_group("MenusGroup").get_children():
-		menu_node.hide()
-	get_tree().paused = false
-	get_tree().get_first_node_in_group("LevelsGroup").add_child(load("res://levels/Level1.tscn").instantiate())
+	var character_select_node = get_tree().get_first_node_in_group("MenusGroup").get_child(3)
+	hide()
+	character_select_node.show()
+	
 
 func _on_options_pressed():
 	print("Options pressed")
