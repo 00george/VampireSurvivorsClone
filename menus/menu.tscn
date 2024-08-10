@@ -11,7 +11,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owqwh")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MainMenuMarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -19,26 +20,30 @@ anchor_bottom = 1.0
 offset_top = -201.0
 offset_right = 800.0
 grow_vertical = 0
+focus_neighbor_bottom = NodePath("VBoxContainer/Options")
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuMarginContainer"]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="MainMenuMarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Start"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="MainMenuMarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Exit")
 text = "Options"
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="MainMenuMarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Options")
 text = "Exit"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
