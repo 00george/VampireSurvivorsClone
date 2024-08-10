@@ -134,7 +134,7 @@ main_menu_scene = ExtResource("2_arbk1")
 zoom = Vector2(2, 2)
 
 [node name="Gun" parent="." instance=ExtResource("3_30ikq")]
-position = Vector2(14, 6)
+position = Vector2(9.53674e-07, 6)
 scale = Vector2(0.1, 0.1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

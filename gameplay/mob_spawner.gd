@@ -13,13 +13,13 @@ func _ready():
 
 
 func spawn_mob():
-	var ghost_mob = preload("res://enemies/ghostmob/ghost_mob.tscn").instantiate()
-	var slime_mob = preload("res://enemies/slime/slime.tscn").instantiate()
+	var coconut_mob = preload("res://enemies/coconut/coconut.tscn").instantiate()
+	var snake_mob = preload("res://enemies/snake/snake.tscn").instantiate()
 	path_follow.progress_ratio = randf()
-	ghost_mob.global_position = path_follow.global_position
-	slime_mob.global_position = path_follow.global_position
-	add_child(ghost_mob)
-	add_child(slime_mob)
+	coconut_mob.global_position = path_follow.global_position
+	snake_mob.global_position = path_follow.global_position
+	add_child(coconut_mob)
+	add_child(snake_mob)
 
 
 func _on_timer_timeout():
