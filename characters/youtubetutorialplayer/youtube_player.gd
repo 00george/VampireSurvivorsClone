@@ -11,7 +11,7 @@ func _enter_tree():
 func _physics_process(delta):
 	if is_multiplayer_authority() || is_local:
 		var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-		velocity = direction * 800
+		velocity = direction * 200
 		if velocity.length() > 0.0:
 			%HappyBoo.play_walk_animation()
 		else:
