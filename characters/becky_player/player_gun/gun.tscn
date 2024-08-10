@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bunir1neumf2b"]
 
 [ext_resource type="Script" path="res://characters/becky_player/player_gun/gun.gd" id="1_ey57c"]
-[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://assets/pistol/pistol.png" id="2_axgxb"]
+[ext_resource type="PackedScene" uid="uid://cavwr5p6hxud" path="res://pickups/gun.tscn" id="2_bta8e"]
 
 [node name="Gun" type="Area2D"]
 collision_layer = 0
@@ -10,13 +10,14 @@ script = ExtResource("1_ey57c")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="Pistol" type="Sprite2D" parent="Marker2D"]
-position = Vector2(262, -11)
-texture = ExtResource("2_axgxb")
+[node name="Gun" parent="Marker2D" instance=ExtResource("2_bta8e")]
+position = Vector2(237, 1)
+scale = Vector2(29.7001, 29.7001)
 
-[node name="ShootingPoint" type="Marker2D" parent="Marker2D/Pistol"]
+[node name="ShootingPoint" type="Marker2D" parent="Marker2D/Gun"]
 unique_name_in_owner = true
-position = Vector2(25, -11)
+position = Vector2(15.4768, -5.15892)
+scale = Vector2(0.573213, 0.573213)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
