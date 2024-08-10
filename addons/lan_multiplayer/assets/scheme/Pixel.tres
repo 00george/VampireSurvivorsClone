@@ -1,0 +1,73 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://50c0nnnvt5ve"]
+
+[ext_resource type="FontFile" uid="uid://cr5ljegnacjfr" path="res://addons/lan_multiplayer/assets/fonts/PixelDigivolveItalic-dV8R.ttf" id="1_vkiqf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_834ev"]
+bg_color = Color(0.192157, 0.4, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfglk"]
+bg_color = Color(0.145098, 0.309804, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7twlo"]
+bg_color = Color(0.145098, 0.309804, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32j0h"]
+bg_color = Color(0.145098, 0.309804, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0cxp"]
+bg_color = Color(0.109804, 0.243137, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5xp7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aurq8"]
+bg_color = Color(0.145098, 0.309804, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0lqo"]
+bg_color = Color(0, 0.501961, 0.282353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+default_font = ExtResource("1_vkiqf")
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_vkiqf")
+Button/styles/disabled = SubResource("StyleBoxFlat_834ev")
+Button/styles/focus = SubResource("StyleBoxFlat_dfglk")
+Button/styles/hover = SubResource("StyleBoxFlat_7twlo")
+Button/styles/normal = SubResource("StyleBoxFlat_32j0h")
+Button/styles/pressed = SubResource("StyleBoxFlat_s0cxp")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_vkiqf")
+Label/styles/normal = SubResource("StyleBoxFlat_o5xp7")
+LineEdit/font_sizes/font_size = 17
+LineEdit/fonts/font = ExtResource("1_vkiqf")
+LineEdit/styles/focus = null
+LineEdit/styles/normal = SubResource("StyleBoxFlat_aurq8")
+LineEdit/styles/read_only = null
+Panel/styles/panel = SubResource("StyleBoxFlat_a0lqo")

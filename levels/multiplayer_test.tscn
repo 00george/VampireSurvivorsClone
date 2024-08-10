@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw28u6jtifyuk"]
+
+[ext_resource type="PackedScene" uid="uid://ct7hbufknkffx" path="res://addons/lan_multiplayer/scenes/world_controller.tscn" id="1_pr5yp"]
+[ext_resource type="PackedScene" uid="uid://s1jml6r4isb" path="res://characters/george/player_george.tscn" id="2_k2hur"]
+
+[node name="MultiplayerTest" type="Node2D"]
+
+[node name="world_controller" parent="." instance=ExtResource("1_pr5yp")]
+player_scene = ExtResource("2_k2hur")
+spawn_path = NodePath("..")

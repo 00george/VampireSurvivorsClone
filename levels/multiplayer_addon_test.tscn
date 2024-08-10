@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://wh72i1utj4mn"]
+
+[ext_resource type="PackedScene" uid="uid://de8cye1e0yply" path="res://addons/lan_multiplayer/scenes/lobby_controller.tscn" id="1_dnpim"]
+
+[node name="MultiplayerAddonTest" type="Node2D"]
+
+[node name="lobby_controller" parent="." instance=ExtResource("1_dnpim")]
+travel_to_scene = "res://levels"

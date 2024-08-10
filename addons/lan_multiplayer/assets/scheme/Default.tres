@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dn2vmjrbb4dc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5xp7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0lqo"]
+bg_color = Color(0.419813, 0.419813, 0.419813, 1)
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+Label/font_sizes/font_size = 16
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxFlat_o5xp7")
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = null
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+Panel/styles/panel = SubResource("StyleBoxFlat_a0lqo")

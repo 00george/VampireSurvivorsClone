@@ -16,6 +16,7 @@ color = Color(0.348375, 0.337307, 0.0559953, 1)
 
 [node name="YoutubePlayer2D" parent="." instance=ExtResource("2_7dw2c")]
 position = Vector2(554, 378)
+is_local = true
 
 [node name="Tree" parent="." instance=ExtResource("3_lbhho")]
 position = Vector2(294, 394)

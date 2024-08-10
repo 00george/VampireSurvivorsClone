@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6s0wu612eiqp"]
+
+[ext_resource type="Theme" uid="uid://dn2vmjrbb4dc6" path="res://addons/lan_multiplayer/assets/scheme/Default.tres" id="1_mag83"]
+[ext_resource type="Script" path="res://addons/lan_multiplayer/scripts/room_player.gd" id="1_pv2hy"]
+[ext_resource type="PackedScene" uid="uid://ckaeco0v0n6lv" path="res://addons/lan_multiplayer/scenes/player_controller.tscn" id="2_17vr7"]
+
+[node name="Label" type="Label"]
+offset_right = 200.0
+offset_bottom = 28.0
+size_flags_vertical = 1
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+theme = ExtResource("1_mag83")
+text = "Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_pv2hy")
+
+[node name="player_controller" parent="." instance=ExtResource("2_17vr7")]
+nodes = Array[NodePath]([NodePath("..")])
+properties = Array[String](["text"])
+sync_once = Array[bool]([true])

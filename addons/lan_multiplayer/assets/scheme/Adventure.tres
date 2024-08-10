@@ -1,0 +1,66 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://21xcogg03b2f"]
+
+[ext_resource type="FontFile" uid="uid://ciwekxi60fcoh" path="res://addons/lan_multiplayer/assets/fonts/InfoStory-LVVJy.ttf" id="1_meeg3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcx62"]
+bg_color = Color(0.188235, 0.615686, 1, 1)
+border_width_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fly0b"]
+bg_color = Color(0.188235, 0.615686, 1, 1)
+border_width_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nm4sy"]
+bg_color = Color(0.188235, 0.615686, 1, 1)
+border_width_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhqoo"]
+bg_color = Color(0.188235, 0.615686, 1, 1)
+border_width_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeimd"]
+bg_color = Color(0, 0.482353, 0.831373, 1)
+border_width_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5xp7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kdkw4"]
+
+[resource]
+default_font = ExtResource("1_meeg3")
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_meeg3")
+Button/styles/disabled = SubResource("StyleBoxFlat_tcx62")
+Button/styles/focus = SubResource("StyleBoxFlat_fly0b")
+Button/styles/hover = SubResource("StyleBoxFlat_nm4sy")
+Button/styles/normal = SubResource("StyleBoxFlat_lhqoo")
+Button/styles/pressed = SubResource("StyleBoxFlat_yeimd")
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_meeg3")
+Label/styles/normal = SubResource("StyleBoxFlat_o5xp7")
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = ExtResource("1_meeg3")
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+Panel/styles/panel = SubResource("StyleBoxEmpty_kdkw4")
