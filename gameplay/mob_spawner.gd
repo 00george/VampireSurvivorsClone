@@ -1,11 +1,13 @@
 extends Node
 
 
-@export var path_follow : PathFollow2D;
+var path_follow : PathFollow2D;
+var player
 var timer: Timer;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	path_follow = get_parent().get_node("YoutubePlayer2D/Path2D/PathFollow2D")
 	timer = get_node("Timer");
 	spawn_mob()
 

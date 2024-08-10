@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bunir1neumf2b"]
+
+[ext_resource type="Script" path="res://characters/becky_player/player_gun/gun.gd" id="1_ey57c"]
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://assets/pistol/pistol.png" id="2_axgxb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fb22"]
+radius = 378.761
+
+[node name="Gun" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ey57c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5fb22")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Pistol" type="Sprite2D" parent="Marker2D"]
+position = Vector2(72, -9)
+texture = ExtResource("2_axgxb")
+
+[node name="ShootingPoint" type="Marker2D" parent="Marker2D/Pistol"]
+unique_name_in_owner = true
+position = Vector2(25, -11)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
