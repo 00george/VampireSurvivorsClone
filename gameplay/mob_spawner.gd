@@ -11,10 +11,13 @@ func _ready():
 
 
 func spawn_mob():
-	var new_mob = preload("res://enemies/ghost_mob.tscn").instantiate()
+	var ghost_mob = preload("res://enemies/ghostmob/ghost_mob.tscn").instantiate()
+	var slime_mob = preload("res://enemies/slime/slime.tscn").instantiate()
 	path_follow.progress_ratio = randf()
-	new_mob.global_position = path_follow.global_position
-	add_child(new_mob)
+	ghost_mob.global_position = path_follow.global_position
+	slime_mob.global_position = path_follow.global_position
+	add_child(ghost_mob)
+	add_child(slime_mob)
 
 
 func _on_timer_timeout():
