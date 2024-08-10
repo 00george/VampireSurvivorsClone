@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm3vfo8v1nxfg"]
+
+[ext_resource type="Script" path="res://characters/youtubetutorialplayer/youtube_player.gd" id="1_oj41m"]
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://assets/sprites/happy_boo/happy_boo.tscn" id="2_aps2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xadmh"]
+size = Vector2(85, 117)
+
+[node name="YoutubePlayer2D" type="CharacterBody2D"]
+script = ExtResource("1_oj41m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -37.5)
+shape = SubResource("RectangleShape2D_xadmh")
+
+[node name="HappyBoo" parent="CollisionShape2D" instance=ExtResource("2_aps2o")]
+unique_name_in_owner = true
+position = Vector2(2.5, 37.5)
