@@ -1,17 +1,23 @@
 extends CharacterBody2D
 
-var health = 3
-
-@export var speed: int = 150.0
+@export var health = 2
+@export var speed = 150
 
 var player
+@onready var sprite = $sprite
 
 func _ready():
 	player = get_tree().get_first_node_in_group("PlayersGroup")
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * speed
+	
+	if direction.x < 0:
+		sprite.flip_h = true
+	elif direction.x > 0:
+		sprite.flip_h = false
+
+	velocity = direction * 150.0
 	move_and_slide()
 
 func take_damage():
