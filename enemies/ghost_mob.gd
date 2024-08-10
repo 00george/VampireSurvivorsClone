@@ -7,7 +7,7 @@ extends CharacterBody2D
 var player
 
 func _ready():
-	player =  %YoutubePlayer2D
+	player = get_tree().get_first_node_in_group("PlayersGroup")
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
