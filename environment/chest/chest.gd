@@ -26,8 +26,6 @@ func _create_buttons():
 		button.custom_minimum_size = Vector2(50,50)
 		button.pressed.connect(_add_weapon_to_invetory.bind(weapon))
 		buttonContainer.add_child(button)
-	
-		
 
 func _add_weapon_to_invetory(weapon: Node2D):
 	var inventory = player.get_node("Inventory")
