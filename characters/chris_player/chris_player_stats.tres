@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://bmyqsxnd0nhh2"]
 
-[ext_resource type="Script" path="res://characters/player_base/player_stats.gd" id="1_07wr2"]
+[ext_resource type="Script" path="res://characters/character_stats.gd" id="1_0uvdu"]
 
 [resource]
-script = ExtResource("1_07wr2")
+script = ExtResource("1_0uvdu")
 attack = 1.0
 defence = 1.0
 speed = 3.0

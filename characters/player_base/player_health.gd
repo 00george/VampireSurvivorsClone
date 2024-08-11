@@ -4,7 +4,7 @@ extends Node
 signal health_depleted
 
 @export var health = 100.0
-@export var main_menu_scene: PackedScene
+@export_file("*.tscn") var main_menu_scene_path: String
 @export var health_bar: ProgressBar
 @export var hurt_box: Area2D
 @export var player_stats: PlayerStats
@@ -20,7 +20,7 @@ func _physics_process(delta):
 		health -= (DAMAGE_RATE * overlapping_mobs.size() * delta) * damage_multiplier
 		health_bar.value = health
 		if health <= 0.0:
-			get_tree().change_scene_to_packed(main_menu_scene)
+			get_tree().change_scene_to_file(main_menu_scene_path)
 			health_depleted.emit()
 
 func change_health(amount):

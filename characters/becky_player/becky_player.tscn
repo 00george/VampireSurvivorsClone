@@ -1,14 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://cm3vfo8v1nxfg"]
+[gd_scene load_steps=27 format=3 uid="uid://cm3vfo8v1nxfg"]
 
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="3_30ikq"]
 [ext_resource type="Texture2D" uid="uid://cfdpd66mehkce" path="res://assets/becky_player/Becky_Character_Sheet_96x96.png" id="3_ioeby"]
 [ext_resource type="Texture2D" uid="uid://besxvfbmaoiwo" path="res://assets/becky_player/becky_up.png" id="4_g8wsk"]
 [ext_resource type="PackedScene" uid="uid://buviuudqsq85e" path="res://characters/player_base/player_movement.tscn" id="4_umxep"]
-[ext_resource type="PackedScene" uid="uid://cprhmdcesxpxt" path="res://characters/player_base/player_experience.tscn" id="4_w4kby"]
+[ext_resource type="PackedScene" path="res://characters/player_base/player_experience.tscn" id="4_w4kby"]
 [ext_resource type="PackedScene" uid="uid://cxh1eb65cahwc" path="res://characters/player_base/player_health.tscn" id="5_eolbk"]
 [ext_resource type="Resource" uid="uid://dd8y1fbecmqpq" path="res://characters/becky_player/becky_player_stats.tres" id="5_fsrgc"]
 [ext_resource type="Script" path="res://characters/player_base/player_health.gd" id="6_enbgr"]
-[ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="7_n2phw"]
 [ext_resource type="PackedScene" uid="uid://dj0lapv21df2a" path="res://characters/player_base/inventory.tscn" id="8_8gu47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f15xu"]
@@ -211,7 +210,7 @@ player_stats = ExtResource("5_fsrgc")
 [node name="PlayerHealth" parent="." node_paths=PackedStringArray("health_bar", "hurt_box") instance=ExtResource("5_eolbk")]
 script = ExtResource("6_enbgr")
 health = 100.0
-main_menu_scene = ExtResource("7_n2phw")
+main_menu_scene_path = "res://levels/Game.tscn"
 health_bar = NodePath("../HealthBar")
 hurt_box = NodePath("../HurtBox")
 player_stats = ExtResource("5_fsrgc")
