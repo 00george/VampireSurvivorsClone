@@ -13,7 +13,7 @@ script = ExtResource("1_3g66b")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Music" type="AudioStreamPlayer2D" parent="CanvasLayer"]
+[node name="Music" type="AudioStreamPlayer" parent="CanvasLayer"]
 stream = ExtResource("2_qb5eo")
 autoplay = true
 
