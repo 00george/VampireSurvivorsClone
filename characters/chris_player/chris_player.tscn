@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bt55yvyf1g28g"]
+[gd_scene load_steps=15 format=3 uid="uid://bt55yvyf1g28g"]
 
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="1_gpx3t"]
 [ext_resource type="PackedScene" uid="uid://c1eaiwh3jlyng" path="res://characters/chris_player/chris_player_animation.tscn" id="2_e1xym"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cxh1eb65cahwc" path="res://characters/player_base/player_health.tscn" id="6_7h8qx"]
 [ext_resource type="PackedScene" path="res://characters/player_base/player_experience.tscn" id="6_mrkup"]
 [ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="7_h1hhk"]
+[ext_resource type="PackedScene" uid="uid://dj0lapv21df2a" path="res://characters/player_base/inventory.tscn" id="9_hn8rm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f15xu"]
 size = Vector2(20, 9)
@@ -97,3 +98,6 @@ player_stats = ExtResource("4_qub2f")
 
 [node name="PlayerExperience" parent="." instance=ExtResource("6_mrkup")]
 player_stats = ExtResource("4_qub2f")
+
+[node name="Inventory" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_hn8rm")]
+player = NodePath("..")
