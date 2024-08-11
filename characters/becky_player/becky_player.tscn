@@ -180,7 +180,7 @@ position = Vector2(-1100, -898)
 rotation = -0.0172142
 
 [node name="PlayerExperience" parent="." instance=ExtResource("4_w4kby")]
-player_stats = ExtResource("5_xm3n3")
+player_stats = ExtResource("5_fsrgc")
 
 [node name="PlayerMovement" parent="." node_paths=PackedStringArray("animatedSprite", "characterBody2D") instance=ExtResource("4_umxep")]
 animatedSprite = NodePath("../AnimatedSprite")
