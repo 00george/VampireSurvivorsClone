@@ -14,11 +14,14 @@ func _ready():
 func spawn_mob():
 	var coconut_mob = preload("res://enemies/coconut/coconut.tscn").instantiate()
 	var snake_mob = preload("res://enemies/snake/snake.tscn").instantiate()
+	var rat_mob = preload("res://enemies/rat/rat.tscn").instantiate()
 	path_follow.progress_ratio = randf()
 	coconut_mob.global_position = path_follow.global_position
 	snake_mob.global_position = path_follow.global_position
+	rat_mob.global_position = path_follow.global_position
 	get_parent().add_child.call_deferred(coconut_mob)
 	get_parent().add_child.call_deferred(snake_mob)
+	get_parent().add_child.call_deferred(rat_mob)
 
 
 func _on_timer_timeout():

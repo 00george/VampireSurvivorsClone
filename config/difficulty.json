@@ -37,8 +37,8 @@
 	},
 	"monsters_spawn_curve": {
 		"0": ["snake"],
-		"1": ["snake", "coconut"],
-		"2": ["snake", "coconut"],
+		"1": ["snake", "coconut", "rat"],
+		"2": ["snake", "coconut", "rat"],
 		"3": ["snake", "coconut"],
 		"4": ["snake", "coconut"],
 		"5": ["snake", "coconut"],
