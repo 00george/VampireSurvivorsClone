@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cprhmdcesxpxt"]
+
+[ext_resource type="Script" path="res://characters/player_base/player_experience.gd" id="1_yd5dy"]
+
+[node name="PlayerExperience" type="Node2D"]
+script = ExtResource("1_yd5dy")
