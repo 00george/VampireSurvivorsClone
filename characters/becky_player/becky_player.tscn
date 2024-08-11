@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cm3vfo8v1nxfg"]
+[gd_scene load_steps=28 format=3 uid="uid://cm3vfo8v1nxfg"]
 
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="3_30ikq"]
 [ext_resource type="Texture2D" uid="uid://cfdpd66mehkce" path="res://assets/becky_player/Becky_Character_Sheet_96x96.png" id="3_ioeby"]
@@ -44,19 +44,27 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("3_ioeby")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wmif1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2f6v"]
 atlas = ExtResource("3_ioeby")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2wer"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_huoub"]
+atlas = ExtResource("3_ioeby")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7htoa"]
 atlas = ExtResource("3_ioeby")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l4ofa"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_epdvg"]
 atlas = ExtResource("3_ioeby")
 region = Rect2(32, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fsxoj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aaq5"]
+atlas = ExtResource("3_ioeby")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrl3b"]
 atlas = ExtResource("3_ioeby")
 region = Rect2(64, 64, 32, 32)
 
@@ -91,10 +99,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wmif1")
+"texture": SubResource("AtlasTexture_p2f6v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x2wer")
+"texture": SubResource("AtlasTexture_huoub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7htoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huoub")
 }],
 "loop": true,
 "name": &"run_left",
@@ -102,10 +116,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l4ofa")
+"texture": SubResource("AtlasTexture_epdvg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fsxoj")
+"texture": SubResource("AtlasTexture_7aaq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrl3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7aaq5")
 }],
 "loop": true,
 "name": &"run_right",
@@ -168,7 +188,8 @@ show_percentage = false
 y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tbfw0")
-animation = &"idle_down"
+animation = &"run_right"
+frame_progress = 0.69815
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(39.2081, 71.2574)
