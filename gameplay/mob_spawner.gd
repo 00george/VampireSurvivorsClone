@@ -1,14 +1,13 @@
 extends Node
 
-@export var spawn_rate_multiplier = 0.99;
 var path_follow : PathFollow2D;
 var player
 var timer: Timer;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	timer = get_node("Timer")
 	path_follow = get_parent().get_node("YoutubePlayer2D/Path2D/PathFollow2D")
-	timer = get_node("Timer");
 	spawn_mob()
 
 
@@ -23,5 +22,9 @@ func spawn_mob():
 
 
 func _on_timer_timeout():
-	timer.wait_time *= spawn_rate_multiplier;
-	spawn_mob()
+	var wait_time = Config.get_spawn_rate(GameTimer._get_elapsed_time_minutes())
+	if (timer.wait_time != wait_time):
+		timer.wait_time = wait_time;
+	var spawn_size = Config.get_spawn_size(GameTimer._get_elapsed_time_minutes())
+	for n in spawn_size:
+		spawn_mob()

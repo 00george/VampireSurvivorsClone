@@ -6,9 +6,22 @@ var config
 func _ready():
 	var file = FileAccess.open("res://config/difficulty.json", FileAccess.READ);
 	var content = file.get_as_text();
-	config = JSON.parse_string(content);
+	var json = JSON.new()
+	var error = json.parse(content);
+	if error == OK:
+		config = json.data
+		print("Read config")
+		print(config)
+	else:
+		print("There was a error")
+		print(json.get_error_message())
 
 
-func _get_spawn_rate(currentMinute: int):
-	var spawn_rate = config["spawn_rate_curve"][currentMinute]
+func get_spawn_rate(currentMinute: int):
+	var spawn_rate = config["spawn_rate_curve"][str(currentMinute)]
 	return spawn_rate;
+
+func get_spawn_size(currentMinute: int):
+	var spawn_size = config["spawn_size_curve"][str(currentMinute)]
+	return spawn_size;
+
