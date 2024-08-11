@@ -1,19 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwetujhqnv4fa"]
+[gd_scene load_steps=8 format=3 uid="uid://cwetujhqnv4fa"]
 
 [ext_resource type="Script" path="res://enemies/basic_enemy.gd" id="1_8eccg"]
 [ext_resource type="Texture2D" uid="uid://d1eba0kfc14g0" path="res://assets/rat/Rat_Combined_96x128.png" id="1_ujen4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4terw"]
-atlas = ExtResource("1_ujen4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhftm"]
-atlas = ExtResource("1_ujen4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y134s"]
-atlas = ExtResource("1_ujen4")
-region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l24gt"]
 atlas = ExtResource("1_ujen4")
@@ -31,23 +19,6 @@ region = Rect2(64, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4terw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhftm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y134s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhftm")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_l24gt")
 }, {
 "duration": 1.0,
@@ -60,7 +31,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p1i41")
 }],
 "loop": true,
-"name": &"walk_right",
+"name": &"move",
 "speed": 15.0
 }]
 
@@ -74,7 +45,9 @@ script = ExtResource("1_8eccg")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3jgeh")
-animation = &"walk_right"
+animation = &"move"
+autoplay = "move"
+frame_progress = 0.670008
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

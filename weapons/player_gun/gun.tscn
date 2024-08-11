@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bunir1neumf2b"]
+[gd_scene load_steps=7 format=3 uid="uid://bunir1neumf2b"]
 
 [ext_resource type="Script" path="res://weapons/player_gun/gun.gd" id="1_klxvo"]
 [ext_resource type="PackedScene" uid="uid://cavwr5p6hxud" path="res://pickups/gun.tscn" id="2_3lge2"]
 [ext_resource type="PackedScene" uid="uid://xi2m6brrua8b" path="res://weapons/weapon.tscn" id="3_i8fpl"]
 [ext_resource type="Script" path="res://weapons/weapon_information.gd" id="3_lamf1"]
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://assets/pistol/pistol.png" id="5_cl8sp"]
 
 [sub_resource type="Resource" id="Resource_h7un6"]
 script = ExtResource("3_lamf1")
 weapon_name = "Gun"
+weapon_icon = ExtResource("5_cl8sp")
+weapon_description = "+1 Gun"
 
 [node name="Gun" type="Area2D"]
 scale = Vector2(0.01, 0.01)

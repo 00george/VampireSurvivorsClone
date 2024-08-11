@@ -12,8 +12,7 @@ weapons = Array[PackedScene]([ExtResource("2_o7pbx")])
 process_mode = 3
 visible = false
 
-[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
-custom_minimum_size = Vector2(50, 50)
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -25,3 +24,4 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 300

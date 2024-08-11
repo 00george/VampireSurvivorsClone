@@ -21,6 +21,10 @@ func get_spawn_rate(currentMinute: int):
 	var spawn_rate = config["spawn_rate_curve"][str(currentMinute)]
 	return spawn_rate;
 
+func get_spawn_monsters(currentMinute: int):
+	var spawn_monsters = config["monsters_spawn_curve"][str(currentMinute)]
+	return spawn_monsters;
+
 func get_spawn_size(currentMinute: int):
 	var spawn_size = config["spawn_size_curve"][str(currentMinute)]
 	return spawn_size;
