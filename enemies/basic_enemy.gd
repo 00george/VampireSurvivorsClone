@@ -27,5 +27,12 @@ func take_damage():
 		queue_free()
 		const SMOKE_SCENE = preload("res://assets/smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()
-		get_parent().add_child(smoke)
+		
+		const XP_ORB = preload("res://gameplay/xp_orb.tscn")
+		var xp_orb = XP_ORB.instantiate()
+		
+		get_parent().add_child.call_deferred(xp_orb)
+		get_parent().add_child.call_deferred(smoke)
+
 		smoke.global_position = global_position
+		xp_orb.global_position = global_position
