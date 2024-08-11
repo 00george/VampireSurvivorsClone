@@ -1,8 +1,9 @@
 extends Control
 
-const characters = ['George', 'Becky']
+const characters = ['George', 'Becky', 'Chris']
 const icon_animated_sprite_paths = {
 	'Becky': "res://assets/becky_player/character_selection.tres",
+	'Chris': "res://assets/chris_player/character_selection.tres",
 }  
 
 @onready var music = $"../../Music"
