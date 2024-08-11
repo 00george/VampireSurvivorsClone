@@ -1,12 +1,60 @@
-[gd_scene load_steps=23 format=3 uid="uid://cm3vfo8v1nxfg"]
+[gd_scene load_steps=21 format=3 uid="uid://dtcse10pkifqr"]
 
-[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://characters/becky_player/player_gun/gun.tscn" id="3_30ikq"]
-[ext_resource type="Texture2D" uid="uid://cfdpd66mehkce" path="res://assets/becky_player/Becky_Character_Sheet_96x96.png" id="3_ioeby"]
-[ext_resource type="Texture2D" uid="uid://besxvfbmaoiwo" path="res://assets/becky_player/becky_up.png" id="4_g8wsk"]
-[ext_resource type="PackedScene" uid="uid://buviuudqsq85e" path="res://characters/player_base/player_movement.tscn" id="4_umxep"]
-[ext_resource type="PackedScene" uid="uid://cxh1eb65cahwc" path="res://characters/player_base/player_health.tscn" id="5_eolbk"]
-[ext_resource type="Script" path="res://characters/player_base/player_health.gd" id="6_enbgr"]
-[ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="7_n2phw"]
+[ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="2_itpeg"]
+[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://characters/becky_player/player_gun/gun.tscn" id="3_v1ov0"]
+[ext_resource type="Texture2D" uid="uid://cfdpd66mehkce" path="res://assets/becky_player/Becky_Character_Sheet_96x96.png" id="4_v88ca"]
+[ext_resource type="Texture2D" uid="uid://besxvfbmaoiwo" path="res://assets/becky_player/becky_up.png" id="5_xe82g"]
+
+[sub_resource type="GDScript" id="GDScript_ybp2e"]
+script/source = "extends CharacterBody2D
+
+signal health_depleted
+
+@export var health = 100.0
+var experience = 0.0
+var animatedSprite: AnimatedSprite2D;
+@export var main_menu_scene: PackedScene
+
+func _ready():
+	animatedSprite = get_node(\"AnimatedSprite\")
+
+func _physics_process(delta):
+	var direction = Input.get_vector(\"move_left\", \"move_right\", \"move_up\", \"move_down\")
+	velocity = direction * 200
+	if direction == Vector2.LEFT:
+		animatedSprite.play(\"run_left\")
+	if direction == Vector2.RIGHT:
+		animatedSprite.play(\"run_right\")
+	if direction == Vector2.UP:
+		animatedSprite.play(\"run_up\")
+	if direction == Vector2.DOWN:
+		animatedSprite.play(\"run_down\")
+	if direction < Vector2(-0.5, -0.5):
+		animatedSprite.play(\"run_left\")
+	if direction > Vector2(0.5, 0.5):
+		animatedSprite.play(\"run_right\")
+	if direction == Vector2.ZERO:
+		animatedSprite.play(\"idle_down\")
+		
+	const DAMAGE_RATE = 20.0
+	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
+	if overlapping_mobs.size() > 0:
+		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
+		%HealthBar.value = health
+		if health <= 0.0:
+			get_tree().change_scene_to_packed(main_menu_scene)
+			health_depleted.emit()
+
+	move_and_collide(direction * 200 * delta)
+		
+
+func change_health(amount):
+	health += amount
+	%HealthBar.value = health
+
+func gain_xp(amount):
+	experience += amount
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f15xu"]
 size = Vector2(20, 9)
@@ -30,39 +78,39 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4idk"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e62mn"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tnmwg"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wmif1"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x2wer"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4ofa"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsxoj"]
-atlas = ExtResource("3_ioeby")
+atlas = ExtResource("4_v88ca")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6anqy"]
-atlas = ExtResource("4_g8wsk")
+atlas = ExtResource("5_xe82g")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0yjgm"]
-atlas = ExtResource("4_g8wsk")
+atlas = ExtResource("5_xe82g")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tbfw0"]
@@ -126,15 +174,17 @@ _data = {
 }
 point_count = 5
 
-[node name="YoutubePlayer2D" type="CharacterBody2D"]
+[node name="PlayerBase" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 5
 collision_mask = 3
+script = SubResource("GDScript_ybp2e")
+main_menu_scene = ExtResource("2_itpeg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Gun" parent="." instance=ExtResource("3_30ikq")]
+[node name="Gun" parent="." instance=ExtResource("3_v1ov0")]
 position = Vector2(9.53674e-07, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -175,14 +225,3 @@ curve = SubResource("Curve2D_d12xc")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(-1100, -898)
 rotation = -0.0172142
-
-[node name="PlayerMovement" parent="." node_paths=PackedStringArray("animatedSprite", "characterBody2D") instance=ExtResource("4_umxep")]
-animatedSprite = NodePath("../AnimatedSprite")
-characterBody2D = NodePath("..")
-
-[node name="PlayerHealth" parent="." node_paths=PackedStringArray("health_bar", "hurt_box") instance=ExtResource("5_eolbk")]
-script = ExtResource("6_enbgr")
-health = 100.0
-main_menu_scene = ExtResource("7_n2phw")
-health_bar = NodePath("../HealthBar")
-hurt_box = NodePath("../HurtBox")
