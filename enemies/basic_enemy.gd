@@ -18,7 +18,7 @@ func _physics_process(delta):
 		sprite.flip_h = false
 
 	velocity = direction * speed
-	move_and_slide()
+	move_and_collide(direction * speed * delta)
 
 func take_damage():
 	health -= 1

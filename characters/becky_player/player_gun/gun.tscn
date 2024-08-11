@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cavwr5p6hxud" path="res://pickups/gun.tscn" id="2_bta8e"]
 
 [node name="Gun" type="Area2D"]
+scale = Vector2(0.01, 0.01)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_ey57c")
@@ -11,7 +12,7 @@ script = ExtResource("1_ey57c")
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Gun" parent="Marker2D" instance=ExtResource("2_bta8e")]
-position = Vector2(237, 1)
+position = Vector2(1200, 1)
 scale = Vector2(29.7001, 29.7001)
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D/Gun"]

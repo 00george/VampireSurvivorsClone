@@ -37,7 +37,7 @@ func _physics_process(delta):
 			get_tree().change_scene_to_packed(main_menu_scene)
 			health_depleted.emit()
 
-	move_and_slide()
+	move_and_collide(direction * 200 * delta)
 		
 
 func change_health(amount):
