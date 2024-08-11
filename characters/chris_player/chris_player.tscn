@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt55yvyf1g28g"]
+[gd_scene load_steps=14 format=3 uid="uid://bt55yvyf1g28g"]
 
-[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://characters/becky_player/player_gun/gun.tscn" id="1_gpx3t"]
+[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="1_gpx3t"]
 [ext_resource type="PackedScene" uid="uid://c1eaiwh3jlyng" path="res://characters/chris_player/chris_player_animation.tscn" id="2_e1xym"]
 [ext_resource type="PackedScene" uid="uid://buviuudqsq85e" path="res://characters/player_base/player_movement.tscn" id="4_f4wnu"]
 [ext_resource type="Resource" uid="uid://bmyqsxnd0nhh2" path="res://characters/chris_player/chris_player_stats.tres" id="4_qub2f"]
+[ext_resource type="Script" path="res://characters/player_base/player_health.gd" id="6_1e7nd"]
 [ext_resource type="PackedScene" uid="uid://cxh1eb65cahwc" path="res://characters/player_base/player_health.tscn" id="6_7h8qx"]
+[ext_resource type="PackedScene" path="res://characters/player_base/player_experience.tscn" id="6_mrkup"]
+[ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="7_h1hhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f15xu"]
 size = Vector2(20, 9)
@@ -84,7 +87,13 @@ animatedSprite = NodePath("../AnimatedSprite")
 characterBody2D = NodePath("..")
 player_stats = ExtResource("4_qub2f")
 
-[node name="PlayerHealth" parent="." node_paths=PackedStringArray("animatedSprite", "characterBody2D") instance=ExtResource("6_7h8qx")]
-animatedSprite = NodePath("../AnimatedSprite")
-characterBody2D = NodePath("..")
+[node name="PlayerHealth" parent="." node_paths=PackedStringArray("health_bar", "hurt_box") instance=ExtResource("6_7h8qx")]
+script = ExtResource("6_1e7nd")
+health = 100.0
+main_menu_scene = ExtResource("7_h1hhk")
+health_bar = NodePath("../HealthBar")
+hurt_box = NodePath("../HurtBox")
+player_stats = ExtResource("4_qub2f")
+
+[node name="PlayerExperience" parent="." instance=ExtResource("6_mrkup")]
 player_stats = ExtResource("4_qub2f")

@@ -7,7 +7,7 @@ var player
 @onready var sprite = $sprite
 
 func _ready():
-	player = get_tree().get_first_node_in_group("PlayersGroup")
+	player = GamePlayManager.get_player()
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)

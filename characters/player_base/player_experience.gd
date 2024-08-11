@@ -14,4 +14,4 @@ func gain_xp(amount : int):
 		level += 1
 		experience -= experience_cap
 		experience_cap *= LEVEL_THRESHOLD_MULTIPLIER
-		get_parent().get_parent().get_node("LevelUpManager").level_up(get_parent())
+		get_parent().get_parent().get_node("LevelUpManager").level_up()

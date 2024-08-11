@@ -7,8 +7,8 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var player
 
-func level_up(player_arg: Node2D):
-	player = player_arg
+func level_up():
+	player = GamePlayManager.get_player()
 	get_tree().paused = true;
 	_create_display()
 	ui.show()
