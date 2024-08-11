@@ -1,0 +1,12 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://ddyt82fymwcts"]
+
+[resource]
+frames = 9
+frame_1/duration = 1.0
+frame_2/duration = 1.0
+frame_3/duration = 1.0
+frame_4/duration = 1.0
+frame_5/duration = 1.0
+frame_6/duration = 1.0
+frame_7/duration = 1.0
+frame_8/duration = 1.0
