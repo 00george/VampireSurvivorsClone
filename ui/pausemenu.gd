@@ -1,5 +1,6 @@
 extends Control
 
+@onready var music = $"../../Music"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,4 +28,5 @@ func _on_main_menu_pressed():
 	get_tree().get_first_node_in_group("LevelsGroup").get_child(0).free()
 	var main_menu_node = get_tree().get_first_node_in_group("MenusGroup").get_child(0)
 	hide() # hide menu
+	music.play()
 	main_menu_node.show()
