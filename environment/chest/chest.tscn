@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ciy8sbdsv4rcq"]
+[gd_scene load_steps=17 format=3 uid="uid://ciy8sbdsv4rcq"]
 
 [ext_resource type="Script" path="res://environment/chest/chest.gd" id="1_7047v"]
 [ext_resource type="Texture2D" uid="uid://dl2lbfruyaob6" path="res://assets/sprites/environment/chest_opening.png" id="2_7xwnt"]
+[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="2_eyl8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqc2d"]
 atlas = ExtResource("2_7xwnt")
@@ -92,10 +93,12 @@ size = Vector2(28, 9)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbfy2"]
 size = Vector2(32, 15)
 
-[node name="Chest" type="StaticBody2D"]
+[node name="Chest" type="StaticBody2D" node_paths=PackedStringArray("buttonContainer")]
 y_sort_enabled = true
 collision_mask = 0
 script = ExtResource("1_7047v")
+buttonContainer = NodePath("CanvasLayer/HFlowContainer")
+weapons = Array[PackedScene]([ExtResource("2_eyl8c")])
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -112,7 +115,26 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_rbfy2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 2
+visible = false
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

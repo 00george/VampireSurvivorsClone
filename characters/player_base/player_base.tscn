@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://dtcse10pkifqr"]
 
 [ext_resource type="PackedScene" uid="uid://xmow6gw060md" path="res://levels/Game.tscn" id="2_itpeg"]
-[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://characters/becky_player/player_gun/gun.tscn" id="3_v1ov0"]
+[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="3_v1ov0"]
 [ext_resource type="Texture2D" uid="uid://cfdpd66mehkce" path="res://assets/becky_player/Becky_Character_Sheet_96x96.png" id="4_v88ca"]
 [ext_resource type="Texture2D" uid="uid://besxvfbmaoiwo" path="res://assets/becky_player/becky_up.png" id="5_xe82g"]
 

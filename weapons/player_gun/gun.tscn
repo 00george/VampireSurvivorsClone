@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bunir1neumf2b"]
+
+[ext_resource type="Script" path="res://weapons/player_gun/gun.gd" id="1_klxvo"]
+[ext_resource type="PackedScene" uid="uid://cavwr5p6hxud" path="res://pickups/gun.tscn" id="2_3lge2"]
+[ext_resource type="PackedScene" uid="uid://xi2m6brrua8b" path="res://weapons/weapon.tscn" id="3_i8fpl"]
+[ext_resource type="Script" path="res://weapons/weapon_information.gd" id="3_lamf1"]
+
+[sub_resource type="Resource" id="Resource_h7un6"]
+script = ExtResource("3_lamf1")
+weapon_name = "Gun"
+
+[node name="Gun" type="Area2D"]
+scale = Vector2(0.01, 0.01)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_klxvo")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Gun" parent="Marker2D" instance=ExtResource("2_3lge2")]
+position = Vector2(1200, 1)
+scale = Vector2(29.7001, 29.7001)
+
+[node name="ShootingPoint" type="Marker2D" parent="Marker2D/Gun"]
+unique_name_in_owner = true
+position = Vector2(15.4768, -5.15892)
+scale = Vector2(0.573213, 0.573213)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Weapon" parent="." instance=ExtResource("3_i8fpl")]
+weapon_information = SubResource("Resource_h7un6")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
