@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://ciy8sbdsv4rcq"]
 
 [ext_resource type="Script" path="res://environment/chest/chest.gd" id="1_7047v"]
-[ext_resource type="Texture2D" uid="uid://dl2lbfruyaob6" path="res://assets/sprites/environment/chest_opening.png" id="2_7xwnt"]
+[ext_resource type="Texture2D" uid="uid://dl2lbfruyaob6" path="res://environment/chest/chest_opening.png" id="2_7xwnt"]
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="2_eyl8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqc2d"]

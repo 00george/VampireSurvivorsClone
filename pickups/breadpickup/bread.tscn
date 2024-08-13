@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvsnlacpdg2ak"]
 
-[ext_resource type="Texture2D" uid="uid://djv7l2hjb7yef" path="res://assets/Weapons_96x96.png" id="1_6w5va"]
+[ext_resource type="Texture2D" uid="uid://djv7l2hjb7yef" path="res://pickups/Weapons_96x96.png" id="1_6w5va"]
 
 [node name="Bread" type="Sprite2D"]
 texture = ExtResource("1_6w5va")

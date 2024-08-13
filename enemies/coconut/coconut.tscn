@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://g8j2l2q3jdx0"]
 
 [ext_resource type="Script" path="res://enemies/basic_enemy.gd" id="1_pvvyj"]
-[ext_resource type="Texture2D" uid="uid://cwf2tb5m10ajo" path="res://assets/sprites/enemies/coconut.png" id="1_qxfn8"]
+[ext_resource type="Texture2D" uid="uid://cwf2tb5m10ajo" path="res://enemies/coconut/coconut.png" id="1_qxfn8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qtml"]
 size = Vector2(22, 11)

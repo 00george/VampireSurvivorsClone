@@ -25,10 +25,10 @@ func take_damage():
 	
 	if health == 0:
 		queue_free()
-		const SMOKE_SCENE = preload("res://assets/smoke_explosion/smoke_explosion.tscn")
+		const SMOKE_SCENE = preload("res://effects/smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()
 		
-		const XP_ORB = preload("res://gameplay/xp_orb.tscn")
+		const XP_ORB = preload("res://gameplay/xp_orb/xp_orb.tscn")
 		var xp_orb = XP_ORB.instantiate()
 		
 		get_parent().add_child.call_deferred(xp_orb)

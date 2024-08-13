@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://f76mgc8sw5dr"]
 
 [ext_resource type="Script" path="res://enemies/basic_enemy.gd" id="1_773ko"]
-[ext_resource type="Texture2D" uid="uid://cwa8f37t5bpae" path="res://assets/sprites/enemies/Snake_Right_96x96.png" id="2_cag5p"]
+[ext_resource type="Texture2D" uid="uid://cwa8f37t5bpae" path="res://enemies/snake/Snake_Right_96x96.png" id="2_cag5p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tprm"]
 atlas = ExtResource("2_cag5p")

@@ -31,10 +31,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="CyberBullySurvivors"
 
-[editor]
+[filesystem]
 
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
+import/blender/enabled=false
+import/fbx/enabled=false
 
 [input]
 
