@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtcse10pkifqr"]
+
+[ext_resource type="Script" path="res://characters/players/player_base/PlayerBase.cs" id="1_ir3md"]
+[ext_resource type="PackedScene" uid="uid://cprhmdcesxpxt" path="res://characters/players/player_base/player_exp.tscn" id="2_qv8s8"]
+[ext_resource type="PackedScene" uid="uid://cxh1eb65cahwc" path="res://characters/players/player_base/player_health.tscn" id="3_q557g"]
+[ext_resource type="PackedScene" uid="uid://buviuudqsq85e" path="res://characters/players/player_base/player_movement.tscn" id="4_n8wnn"]
+
+[node name="PlayerBase" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ir3md")
+
+[node name="PlayerExp" parent="." instance=ExtResource("2_qv8s8")]
+
+[node name="PlayerHealth" parent="." instance=ExtResource("3_q557g")]
+MainMenuScenePath = "res://ui/menu.tscn"
+
+[node name="PlayerMovement" parent="." instance=ExtResource("4_n8wnn")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

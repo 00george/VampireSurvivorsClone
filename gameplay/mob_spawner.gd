@@ -12,9 +12,9 @@ func _ready():
 
 
 func spawn_mob():
-	var coconut_mob = preload("res://enemies/coconut/coconut.tscn").instantiate()
-	var snake_mob = preload("res://enemies/snake/snake.tscn").instantiate()
-	var rat_mob = preload("res://enemies/rat/rat.tscn").instantiate()
+	var coconut_mob = preload("res://characters/enemies/coconut/coconut.tscn").instantiate()
+	var snake_mob = preload("res://characters/enemies/snake/snake.tscn").instantiate()
+	var rat_mob = preload("res://characters/enemies/rat/rat.tscn").instantiate()
 	
 	path_follow.progress_ratio = randf()
 	var monstersToSpawn = Config.get_spawn_monsters(GameTimer._get_elapsed_time_minutes())

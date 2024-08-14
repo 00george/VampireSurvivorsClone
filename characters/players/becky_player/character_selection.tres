@@ -1,0 +1,41 @@
+[gd_resource type="AnimatedTexture" load_steps=13 format=3 uid="uid://cjjoe3q3ltpa2"]
+
+[ext_resource type="Texture2D" uid="uid://bj31p8hmoy04p" path="res://characters/players/becky_player/Becky_0.png" id="1_defth"]
+[ext_resource type="Texture2D" uid="uid://cx1qhw5m3pkrd" path="res://characters/players/becky_player/Becky_1.png" id="2_bp0xn"]
+[ext_resource type="Texture2D" uid="uid://bmajv37hlvbh7" path="res://characters/players/becky_player/Becky_10.png" id="3_ualc3"]
+[ext_resource type="Texture2D" uid="uid://cyphtonpl1tef" path="res://characters/players/becky_player/Becky_11.png" id="4_6psbp"]
+[ext_resource type="Texture2D" uid="uid://gdjuyle1a07f" path="res://characters/players/becky_player/Becky_2.png" id="5_f5gi5"]
+[ext_resource type="Texture2D" uid="uid://c75w53i5jb7p4" path="res://characters/players/becky_player/Becky_3.png" id="6_n0rxd"]
+[ext_resource type="Texture2D" uid="uid://c38dv5unhegbg" path="res://characters/players/becky_player/Becky_4.png" id="7_xag6b"]
+[ext_resource type="Texture2D" uid="uid://cw5jq4uoq5qiq" path="res://characters/players/becky_player/Becky_5.png" id="8_ql203"]
+[ext_resource type="Texture2D" uid="uid://bce8v6d27kkiq" path="res://characters/players/becky_player/Becky_6.png" id="9_m2xpk"]
+[ext_resource type="Texture2D" uid="uid://qkuh863i4cxw" path="res://characters/players/becky_player/Becky_7.png" id="10_tieja"]
+[ext_resource type="Texture2D" uid="uid://dwgggqipndbyr" path="res://characters/players/becky_player/Becky_8.png" id="11_xn8xx"]
+[ext_resource type="Texture2D" uid="uid://ct2samm26sfme" path="res://characters/players/becky_player/Becky_9.png" id="12_jqto0"]
+
+[resource]
+frames = 12
+speed_scale = 2.0
+frame_0/texture = ExtResource("1_defth")
+frame_1/texture = ExtResource("2_bp0xn")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("5_f5gi5")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("6_n0rxd")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("7_xag6b")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("8_ql203")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("9_m2xpk")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("10_tieja")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("11_xn8xx")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("12_jqto0")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("3_ualc3")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("4_6psbp")
+frame_11/duration = 1.0
