@@ -2,10 +2,10 @@ extends Control
 
 @export var character_scenes: Array[PackedScene];
 
-const characters = ['George', 'Becky', 'Chris']
+const characters = ['Becky', 'Chris']
 const icon_animated_sprite_paths = {
-	'Becky': "res://characters/becky_player/character_selection.tres",
-	'Chris': "res://characters/chris_player/character_selection.tres",
+	'Becky': "res://characters/players/becky_player/character_selection.tres",
+	'Chris': "res://characters/players/chris_player/character_selection.tres",
 }  
 
 @onready var music = $"../../Music"
@@ -13,9 +13,7 @@ const icon_animated_sprite_paths = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for character in characters:
-		print(character)
-		print(icon_animated_sprite_paths.get(character))
-		%CharacterList.add_item(character, load(icon_animated_sprite_paths.get(character, "res://assets/sprites/happy_boo/square_ref.png")))
+		%CharacterList.add_item(character, load(icon_animated_sprite_paths.get(character)))
 
 func _on_start_pressed():
 	var selected_items = %CharacterList.get_selected_items()

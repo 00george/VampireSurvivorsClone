@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://ch30drybamniw"]
+
+[ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="1_gpx3t"]
+[ext_resource type="PackedScene" uid="uid://dtcse10pkifqr" path="res://characters/players/player_base/player_base.tscn" id="1_v3chi"]
+[ext_resource type="PackedScene" uid="uid://c1eaiwh3jlyng" path="res://characters/players/chris_player/chris_player_animation.tscn" id="2_e1xym"]
+[ext_resource type="Resource" uid="uid://c15wa6slvdblj" path="res://characters/players/chris_player/chris_player_stats.tres" id="2_echvo"]
+[ext_resource type="PackedScene" uid="uid://dj0lapv21df2a" path="res://characters/players/player_base/inventory.tscn" id="9_hn8rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8pya"]
+size = Vector2(20, 9)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hft55"]
+radius = 13.0
+height = 36.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tnxys"]
+radius = 500.0
+
+[sub_resource type="Curve2D" id="Curve2D_jiurg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1100, -898, 0, 0, 0, 0, 933, -933, 0, 0, 0, 0, 999, 683, 0, 0, 0, 0, -1149, 673, 0, 0, 0, 0, -1100, -898)
+}
+point_count = 5
+
+[node name="ChrisPlayer" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 5
+collision_mask = 3
+
+[node name="PlayerBase" parent="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_v3chi")]
+AnimatedSprite = NodePath("../AnimatedSprite")
+HurtBox = NodePath("../HurtBox")
+CharacterStats = ExtResource("2_echvo")
+CharacterBody = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_r8pya")
+
+[node name="HurtBox" type="Area2D" parent="CharacterBody2D"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="HitboxCollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/HurtBox"]
+shape = SubResource("CapsuleShape2D_hft55")
+debug_color = Color(0.945272, 0.235251, 0, 0.42)
+
+[node name="AnimatedSprite" parent="CharacterBody2D" instance=ExtResource("2_e1xym")]
+
+[node name="Gun" parent="CharacterBody2D" instance=ExtResource("1_gpx3t")]
+position = Vector2(9.53674e-07, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Gun"]
+visible = false
+position = Vector2(1200, 0)
+shape = SubResource("CircleShape2D_tnxys")
+disabled = true
+
+[node name="Inventory" parent="CharacterBody2D" instance=ExtResource("9_hn8rm")]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(39.2081, 71.2574)
+scale = Vector2(0.649441, 0.594059)
+curve = SubResource("Curve2D_jiurg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-1100, -898)
+rotation = -0.0172142

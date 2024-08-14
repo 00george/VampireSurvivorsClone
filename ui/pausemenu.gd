@@ -6,10 +6,6 @@ extends Control
 func _ready():
 	%OptionsMarginContainer/VBoxContainer/Resume.grab_focus()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _on_fullscreen_pressed():
 	var window_mode = DisplayServer.window_get_mode()
 	if (window_mode == DisplayServer.WINDOW_MODE_FULLSCREEN):

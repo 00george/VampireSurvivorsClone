@@ -6,11 +6,6 @@ func _ready():
 	%OptionsMarginContainer/VBoxContainer/MainMenu.grab_focus()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_mainmenu_pressed():
 	var main_menu_node = get_tree().get_first_node_in_group("MenusGroup").get_child(0)
 	hide() # hide menu

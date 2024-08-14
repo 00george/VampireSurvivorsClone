@@ -1,0 +1,49 @@
+[gd_resource type="AnimatedTexture" load_steps=13 format=3 uid="uid://pxr7nhfhstvv"]
+
+[ext_resource type="Texture2D" uid="uid://dyw5h4rbbdfgx" path="res://characters/players/chris_player/Chris_Front_Walk_1.png" id="1_njs0u"]
+[ext_resource type="Texture2D" uid="uid://cq27u7pdjb8vb" path="res://characters/players/chris_player/Chris_Front_View.png" id="2_sgbqk"]
+[ext_resource type="Texture2D" uid="uid://y2armmq71yui" path="res://characters/players/chris_player/Chris_Back_Walk_2.png" id="3_oy33v"]
+[ext_resource type="Texture2D" uid="uid://dhuin6ajory1c" path="res://characters/players/chris_player/Chris_Back_View.png" id="4_p4olt"]
+[ext_resource type="Texture2D" uid="uid://c3qji4dv2wp1t" path="res://characters/players/chris_player/Chris_Right_Walk_1.png" id="5_u6m26"]
+[ext_resource type="Texture2D" uid="uid://bak50vulsax8o" path="res://characters/players/chris_player/Chris_Right_View.png" id="6_vvaoa"]
+[ext_resource type="Texture2D" uid="uid://wn2jh7k3q8bp" path="res://characters/players/chris_player/Chris_Right_Walk_2.png" id="7_xqksj"]
+[ext_resource type="Texture2D" uid="uid://rqolco54u72g" path="res://characters/players/chris_player/Chris_Front_Walk_2.png" id="8_wggku"]
+[ext_resource type="Texture2D" uid="uid://f08lp63ht2ed" path="res://characters/players/chris_player/Chris_Left_Walk_1.png" id="9_g12pd"]
+[ext_resource type="Texture2D" uid="uid://c7clbtm5quapu" path="res://characters/players/chris_player/Chris_Left_View.png" id="10_73cy2"]
+[ext_resource type="Texture2D" uid="uid://cotj0b0khcmnf" path="res://characters/players/chris_player/Chris_Left_Walk_2.png" id="11_52u65"]
+[ext_resource type="Texture2D" uid="uid://2do32kejkot1" path="res://characters/players/chris_player/Chris_Back_Walk_1.png" id="12_2nlqi"]
+
+[resource]
+frames = 16
+speed_scale = 60.0
+frame_0/texture = ExtResource("1_njs0u")
+frame_1/texture = ExtResource("2_sgbqk")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("8_wggku")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("2_sgbqk")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("9_g12pd")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("10_73cy2")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("11_52u65")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("10_73cy2")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("12_2nlqi")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("4_p4olt")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("3_oy33v")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("4_p4olt")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("5_u6m26")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("6_vvaoa")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("7_xqksj")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("6_vvaoa")
+frame_15/duration = 1.0
