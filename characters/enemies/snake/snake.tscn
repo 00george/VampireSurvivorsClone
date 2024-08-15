@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://f76mgc8sw5dr"]
+[gd_scene load_steps=11 format=3 uid="uid://f76mgc8sw5dr"]
 
-[ext_resource type="Script" path="res://characters/enemies/basic_enemy.gd" id="1_773ko"]
+[ext_resource type="Script" path="res://characters/enemies/BasicEnemy.cs" id="1_d4kqj"]
 [ext_resource type="Texture2D" uid="uid://cwa8f37t5bpae" path="res://characters/enemies/snake/Snake_Right_96x96.png" id="2_cag5p"]
+[ext_resource type="Resource" uid="uid://cgqqmthh8bnin" path="res://characters/enemies/snake/snake_stats.tres" id="2_y8dix"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tprm"]
 atlas = ExtResource("2_cag5p")
@@ -54,9 +55,9 @@ height = 22.0027
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_773ko")
-health = 1
-speed = 120
+script = ExtResource("1_d4kqj")
+_health = 1.0
+_characterStats = ExtResource("2_y8dix")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true

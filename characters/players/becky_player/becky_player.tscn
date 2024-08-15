@@ -131,44 +131,40 @@ _data = {
 }
 point_count = 5
 
-[node name="BeckyPlayer" type="Node2D"]
+[node name="BeckyPlayer" type="CharacterBody2D"]
 y_sort_enabled = true
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-collision_layer = 5
-collision_mask = 3
-
-[node name="PlayerBase" parent="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_e0cer")]
+[node name="PlayerBase" parent="." node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_e0cer")]
 AnimatedSprite = NodePath("../AnimatedSprite")
 HurtBox = NodePath("../HurtBox")
 CharacterStats = ExtResource("5_fsrgc")
 CharacterBody = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_f15xu")
 disabled = true
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tbfw0")
 animation = &"idle_down"
 
-[node name="HurtBox" type="Area2D" parent="CharacterBody2D"]
+[node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
-[node name="HurtBoxCollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/HurtBox"]
+[node name="HurtBoxCollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CapsuleShape2D_ohlc1")
 debug_color = Color(0.945272, 0.235251, 0, 0.42)
 
-[node name="Gun" parent="CharacterBody2D" instance=ExtResource("3_30ikq")]
+[node name="Gun" parent="." instance=ExtResource("3_30ikq")]
 position = Vector2(9.53674e-07, 6)
 
-[node name="Inventory" parent="CharacterBody2D" node_paths=PackedStringArray("player") instance=ExtResource("8_8gu47")]
-player = NodePath("../..")
+[node name="Inventory" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_8gu47")]
+player = NodePath("..")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(39.2081, 71.2574)

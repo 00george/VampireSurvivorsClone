@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cvyc74mptw440"]
+
+[ext_resource type="Script" path="res://characters/CharacterStats.cs" id="1_es186"]
+
+[resource]
+script = ExtResource("1_es186")
+Attack = 1.0
+Defence = 1.0
+Speed = 1.0
+ExpGain = 1.0
