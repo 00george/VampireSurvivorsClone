@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djnwh4ln4i0iq"]
 
-[ext_resource type="Script" path="res://ui/character_selection.gd" id="1_hp56j"]
+[ext_resource type="Script" path="res://ui/CharacterSelection.cs" id="1_abfgv"]
 [ext_resource type="PackedScene" uid="uid://cm3vfo8v1nxfg" path="res://characters/players/becky_player/becky_player.tscn" id="2_qa25a"]
 [ext_resource type="PackedScene" uid="uid://ch30drybamniw" path="res://characters/players/chris_player/chris_player.tscn" id="3_4adpu"]
 
@@ -12,8 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hp56j")
-character_scenes = Array[PackedScene]([ExtResource("2_qa25a"), ExtResource("3_4adpu")])
+script = ExtResource("1_abfgv")
+CharacterScenes = Array[PackedScene]([ExtResource("2_qa25a"), ExtResource("3_4adpu")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

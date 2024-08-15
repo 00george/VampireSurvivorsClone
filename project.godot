@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 GameTimer="*res://gameplay/game_timer.tscn"
 Config="*res://config/config.gd"
-GamePlayManager="*res://gameplay/game_manager.gd"
+GamePlayManager="*res://gameplay/GameManager.cs"
 
 [display]
 

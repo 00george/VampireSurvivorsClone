@@ -7,7 +7,7 @@ var timer: Timer;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer = get_node("Timer")
-	path_follow = GamePlayManager.get_player().get_node("Path2D/PathFollow2D")
+	path_follow = GamePlayManager.GetPlayer().get_node("Path2D/PathFollow2D")
 	spawn_mob()
 
 

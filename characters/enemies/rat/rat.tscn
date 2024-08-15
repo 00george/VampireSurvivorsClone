@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwetujhqnv4fa"]
+[gd_scene load_steps=9 format=3 uid="uid://cwetujhqnv4fa"]
 
-[ext_resource type="Script" path="res://characters/enemies/basic_enemy.gd" id="1_8eccg"]
+[ext_resource type="Script" path="res://characters/enemies/BasicEnemy.cs" id="1_dyuln"]
 [ext_resource type="Texture2D" uid="uid://d1eba0kfc14g0" path="res://characters/enemies/rat/Rat_Combined_96x128.png" id="1_ujen4"]
+[ext_resource type="Resource" uid="uid://cvyc74mptw440" path="res://characters/enemies/rat/rat_stats.tres" id="2_2u3rx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l24gt"]
 atlas = ExtResource("1_ujen4")
@@ -41,7 +42,9 @@ size = Vector2(32, 16)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_8eccg")
+script = ExtResource("1_dyuln")
+_speed = 140.0
+_characterStats = ExtResource("2_2u3rx")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3jgeh")

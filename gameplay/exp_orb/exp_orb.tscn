@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://twcwtq630jx6"]
 
-[ext_resource type="Script" path="res://gameplay/xp_orb/xp_orb.gd" id="1_3rgk1"]
-[ext_resource type="Texture2D" uid="uid://dwjf7yrved5y7" path="res://gameplay/xp_orb/experience_orb.png" id="2_ml186"]
+[ext_resource type="Script" path="res://gameplay/exp_orb/xp_orb.gd" id="1_3rgk1"]
+[ext_resource type="Texture2D" uid="uid://dwjf7yrved5y7" path="res://gameplay/exp_orb/experience_orb.png" id="2_ml186"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jryti"]
 radius = 22.0

@@ -22,44 +22,42 @@ _data = {
 }
 point_count = 5
 
-[node name="ChrisPlayer" type="Node2D"]
+[node name="ChrisPlayer" type="CharacterBody2D"]
 y_sort_enabled = true
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 5
 collision_mask = 3
 
-[node name="PlayerBase" parent="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_v3chi")]
+[node name="PlayerBase" parent="." node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_v3chi")]
 AnimatedSprite = NodePath("../AnimatedSprite")
 HurtBox = NodePath("../HurtBox")
 CharacterStats = ExtResource("2_echvo")
 CharacterBody = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_r8pya")
 
-[node name="HurtBox" type="Area2D" parent="CharacterBody2D"]
+[node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
-[node name="HitboxCollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/HurtBox"]
+[node name="HitboxCollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CapsuleShape2D_hft55")
 debug_color = Color(0.945272, 0.235251, 0, 0.42)
 
-[node name="AnimatedSprite" parent="CharacterBody2D" instance=ExtResource("2_e1xym")]
+[node name="AnimatedSprite" parent="." instance=ExtResource("2_e1xym")]
 
-[node name="Gun" parent="CharacterBody2D" instance=ExtResource("1_gpx3t")]
+[node name="Gun" parent="." instance=ExtResource("1_gpx3t")]
 position = Vector2(9.53674e-07, 6)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Gun"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gun"]
 visible = false
 position = Vector2(1200, 0)
 shape = SubResource("CircleShape2D_tnxys")
 disabled = true
 
-[node name="Inventory" parent="CharacterBody2D" instance=ExtResource("9_hn8rm")]
+[node name="Inventory" parent="." instance=ExtResource("9_hn8rm")]
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(39.2081, 71.2574)

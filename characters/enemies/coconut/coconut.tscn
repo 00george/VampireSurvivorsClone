@@ -1,7 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://g8j2l2q3jdx0"]
+[gd_scene load_steps=6 format=3 uid="uid://g8j2l2q3jdx0"]
 
-[ext_resource type="Script" path="res://characters/enemies/basic_enemy.gd" id="1_pvvyj"]
+[ext_resource type="Script" path="res://characters/enemies/BasicEnemy.cs" id="1_km0il"]
 [ext_resource type="Texture2D" uid="uid://cwf2tb5m10ajo" path="res://characters/enemies/coconut/coconut.png" id="1_qxfn8"]
+[ext_resource type="Resource" uid="uid://byg0gxeobkgek" path="res://characters/enemies/coconut/coconut_stats.tres" id="2_j1tqu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgbq8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qxfn8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qtml"]
 size = Vector2(22, 11)
@@ -10,13 +22,15 @@ size = Vector2(22, 11)
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_pvvyj")
-speed = 100
+script = ExtResource("1_km0il")
+_speed = 100.0
+_characterStats = ExtResource("2_j1tqu")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wgbq8")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_7qtml")
-
-[node name="sprite" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_qxfn8")
