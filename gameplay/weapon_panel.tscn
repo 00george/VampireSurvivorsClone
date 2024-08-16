@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c10yfquh71ptv"]
 
-[ext_resource type="Script" path="res://gameplay/weapon_panel.gd" id="1_ygndt"]
+[ext_resource type="Script" path="res://gameplay/WeaponPanel.cs" id="1_l1m3d"]
 
 [sub_resource type="Gradient" id="Gradient_0xe7u"]
 offsets = PackedFloat32Array(0.454545)
@@ -13,7 +13,7 @@ gradient = SubResource("Gradient_0xe7u")
 custom_minimum_size = Vector2(300, 800)
 offset_right = 300.0
 offset_bottom = 800.0
-script = ExtResource("1_ygndt")
+script = ExtResource("1_l1m3d")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

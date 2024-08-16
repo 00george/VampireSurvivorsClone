@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://nys7is7ep6bs"]
 
-[ext_resource type="Script" path="res://gameplay/level_up_manager.gd" id="1_01gcx"]
+[ext_resource type="Script" path="res://gameplay/LevelUpManger.cs" id="1_p68a7"]
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="2_o7pbx"]
 
 [node name="LevelUpManager" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_01gcx")
-weapons = Array[PackedScene]([ExtResource("2_o7pbx")])
+script = ExtResource("1_p68a7")
+Weapons = Array[PackedScene]([ExtResource("2_o7pbx")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3

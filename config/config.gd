@@ -28,4 +28,3 @@ func get_spawn_monsters(currentMinute: int):
 func get_spawn_size(currentMinute: int):
 	var spawn_size = config["spawn_size_curve"][str(currentMinute)]
 	return spawn_size;
-

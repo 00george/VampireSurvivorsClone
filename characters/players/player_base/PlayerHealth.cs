@@ -39,4 +39,9 @@ public partial class PlayerHealth : Node
 			}
 		}
 	}
+
+	public void ChangeHealth(int amount)
+	{
+		_health += amount;
+	}
 }

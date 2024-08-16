@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://civxk544mhdvj"]
+
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://weapons/player_gun/pistol.png" id="1_43yrb"]
+[ext_resource type="Script" path="res://weapons/WeaponInformation.cs" id="2_kyj7s"]
+
+[resource]
+script = ExtResource("2_kyj7s")
+WeaponName = "weapon"
+WeaponIcon = ExtResource("1_43yrb")
+WeaponDescription = "+1 Gun"

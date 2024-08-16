@@ -42,7 +42,7 @@ unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
-[node name="HitboxCollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="HurtBoxCollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CapsuleShape2D_hft55")
 debug_color = Color(0.945272, 0.235251, 0, 0.42)
 

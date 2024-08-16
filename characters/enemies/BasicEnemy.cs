@@ -43,7 +43,7 @@ public partial class BasicEnemy : CharacterBody2D
 		{
 			QueueFree();
 			Node2D Smoke = (Node2D) _smokeEffectScene.Instantiate();
-			Node2D ExpOrb = (Node2D) _expOrbScene.Instantiate();
+			ExpOrb ExpOrb = (ExpOrb) _expOrbScene.Instantiate();
 
 			GetParent().CallDeferred("add_child", Smoke);
 			GetParent().CallDeferred("add_child", ExpOrb);
