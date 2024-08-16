@@ -11,6 +11,9 @@ public partial class PlayerExp : Node
 
 	public const float LevelThresholdMultiplier = 1.5f;
 
+	[Signal]
+	public delegate void LevelUpEventHandler();
+
 	public void GainExp(int Amount, float expModifier)
 	{
 		Exp += Amount * expModifier;
@@ -20,7 +23,7 @@ public partial class PlayerExp : Node
 			Level += 1;
 			Exp -= ExpCap;
 			ExpCap *= LevelThresholdMultiplier;
-			GetParent().GetParent().GetNode("LevelUpManager"); //.level_up();
+			GetParent().GetParent().GetParent().GetNode<LevelUpManger>("LevelUpManager").OnLevelUp();
 		}
 	}
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cm3vfo8v1nxfg"]
+[gd_scene load_steps=23 format=3 uid="uid://cm3vfo8v1nxfg"]
 
 [ext_resource type="PackedScene" uid="uid://dtcse10pkifqr" path="res://characters/players/player_base/player_base.tscn" id="1_e0cer"]
 [ext_resource type="PackedScene" uid="uid://bunir1neumf2b" path="res://weapons/player_gun/gun.tscn" id="3_30ikq"]
@@ -9,6 +9,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f15xu"]
 size = Vector2(20, 9)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohlc1"]
+radius = 13.0
+height = 36.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4idk"]
 atlas = ExtResource("3_ioeby")
@@ -121,9 +125,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohlc1"]
-radius = 13.0
-height = 36.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_ix1m0"]
+radius = 500.0
 
 [sub_resource type="Curve2D" id="Curve2D_d12xc"]
 _data = {
@@ -133,6 +136,8 @@ point_count = 5
 
 [node name="BeckyPlayer" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 5
+collision_mask = 3
 
 [node name="PlayerBase" parent="." node_paths=PackedStringArray("AnimatedSprite", "HurtBox", "CharacterBody") instance=ExtResource("1_e0cer")]
 AnimatedSprite = NodePath("../AnimatedSprite")
@@ -143,13 +148,6 @@ CharacterBody = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_f15xu")
-disabled = true
-
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-y_sort_enabled = true
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_tbfw0")
-animation = &"idle_down"
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -160,11 +158,22 @@ collision_mask = 2
 shape = SubResource("CapsuleShape2D_ohlc1")
 debug_color = Color(0.945272, 0.235251, 0, 0.42)
 
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tbfw0")
+animation = &"idle_down"
+
 [node name="Gun" parent="." instance=ExtResource("3_30ikq")]
 position = Vector2(9.53674e-07, 6)
 
-[node name="Inventory" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_8gu47")]
-player = NodePath("..")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gun"]
+visible = false
+position = Vector2(1200, 0)
+shape = SubResource("CircleShape2D_ix1m0")
+disabled = true
+
+[node name="Inventory" parent="." instance=ExtResource("8_8gu47")]
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(39.2081, 71.2574)
