@@ -41,7 +41,7 @@ public partial class CharacterSelection : Control
 				MenuNode.Hide();
 			}
 			_music.Stop();
-			GameManager.Instance.SetPlayer(CharacterScenes[SelectedItems[0]].Instantiate());
+			GameManager.Instance.SetPlayer((CharacterBody2D) CharacterScenes[SelectedItems[0]].Instantiate());
 			GetTree().Paused = false;
 			GetTree().GetFirstNodeInGroup("LevelsGroup").AddChild(GD.Load<PackedScene>(_level1Path).Instantiate());
 		}

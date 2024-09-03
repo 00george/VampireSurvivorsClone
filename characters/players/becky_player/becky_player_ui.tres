@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://tg1mu00dxxch"]
+
+[ext_resource type="Texture2D" uid="uid://bdb7v1ovyes7f" path="res://characters/players/becky_player/becky_icon.png" id="1_r5jp8"]
+[ext_resource type="Script" path="res://ui/PlayerResourceUI.cs" id="2_pk121"]
+
+[resource]
+script = ExtResource("2_pk121")
+Name = "Becky"
+Icon = ExtResource("1_r5jp8")

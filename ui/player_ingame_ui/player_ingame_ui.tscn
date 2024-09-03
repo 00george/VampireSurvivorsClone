@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn7w41jvaalur"]
+
+[ext_resource type="Script" path="res://ui/player_ingame_ui/PlayerIngameUI.cs" id="1_0ihuv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk8kp"]
+bg_color = Color(0.556953, 0.556953, 0.556953, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frrlc"]
+bg_color = Color(0, 0.988766, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx1jp"]
+bg_color = Color(0.25056, 0.619697, 0.952722, 1)
+
+[node name="PlayerIngameUi" type="GridContainer"]
+anchors_preset = -1
+anchor_right = 0.295312
+anchor_bottom = 0.0564815
+columns = 2
+script = ExtResource("1_0ihuv")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TopBar" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 25)
+layout_mode = 2
+
+[node name="HealthBar" type="ProgressBar" parent="VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(500, 25)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -13.5
+offset_right = 500.0
+offset_bottom = 13.5
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bk8kp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_frrlc")
+step = 0.0
+value = 100.0
+rounded = true
+show_percentage = false
+
+[node name="HealthText" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -11.5
+offset_right = 250.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "100/100"
+horizontal_alignment = 2
+
+[node name="BottomBar" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 25)
+layout_mode = 2
+
+[node name="ExpBar" type="ProgressBar" parent="VBoxContainer/BottomBar"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -13.5
+offset_right = 500.0
+offset_bottom = 13.5
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bk8kp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nx1jp")
+max_value = 20.0
+step = 0.0
+rounded = true
+show_percentage = false
+
+[node name="ExpText" type="Label" parent="VBoxContainer/BottomBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "0/100"
+horizontal_alignment = 2

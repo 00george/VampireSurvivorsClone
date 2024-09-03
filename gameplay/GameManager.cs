@@ -6,7 +6,7 @@ public partial class GameManager : Node
 	
 	public static GameManager Instance { get; private set; }
 
-	public Node Player { get; set;}
+	public CharacterBody2D Player { get; set;}
 	
 	public override void _Ready()
 	{
@@ -14,11 +14,11 @@ public partial class GameManager : Node
 	}
 
 	// Remove these gettters and setters later
-	public Node GetPlayer(){
+	public CharacterBody2D GetPlayer(){
 		return Player;
 	}
 
-	public void SetPlayer(Node player)
+	public void SetPlayer(CharacterBody2D player)
 	{
 		Player = player;
 	}
