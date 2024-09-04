@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5s5tluj6n4m7"
-path="res://.godot/imported/Chris_Character_Sheet_96x128.png-14584e0cfb50676f2bc5799feecec71d.ctex"
+uid="uid://dwgggqipndbyr"
+path="res://.godot/imported/Becky_8.png-d9990aec5379f1bb6812ffc2705688a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/players/chris_player/Chris_Character_Sheet_96x128.png"
-dest_files=["res://.godot/imported/Chris_Character_Sheet_96x128.png-14584e0cfb50676f2bc5799feecec71d.ctex"]
+source_file="res://characters/players/becky_player/character_select_sprite_frames/Becky_8.png"
+dest_files=["res://.godot/imported/Becky_8.png-d9990aec5379f1bb6812ffc2705688a1.ctex"]
 
 [params]
 

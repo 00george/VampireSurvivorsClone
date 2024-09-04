@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bce8v6d27kkiq"
-path="res://.godot/imported/Becky_6.png-db6869e15c8821020a898feacab8d662.ctex"
+uid="uid://f08lp63ht2ed"
+path="res://.godot/imported/Chris_Left_Walk_1.png-81cc8505109adc13119da25e534b8aea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/players/becky_player/Becky_6.png"
-dest_files=["res://.godot/imported/Becky_6.png-db6869e15c8821020a898feacab8d662.ctex"]
+source_file="res://characters/players/chris_player/character_select_sprite_frames/Chris_Left_Walk_1.png"
+dest_files=["res://.godot/imported/Chris_Left_Walk_1.png-81cc8505109adc13119da25e534b8aea.ctex"]
 
 [params]
 

@@ -15,7 +15,7 @@ public partial class CharacterSelection : Control
 
 	private AudioStreamPlayer2D _music;
 
-	private const String _level1Path = "res://levels/Level1.tscn";
+	private const String _level1Path = "res://levels/level1.tscn";
 
 	public override void _Ready()
 	{

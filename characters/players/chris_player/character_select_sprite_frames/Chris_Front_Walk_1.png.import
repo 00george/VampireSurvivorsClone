@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cotj0b0khcmnf"
-path="res://.godot/imported/Chris_Left_Walk_2.png-fed49be85093217b3be511742212c5fa.ctex"
+uid="uid://dyw5h4rbbdfgx"
+path="res://.godot/imported/Chris_Front_Walk_1.png-d471ef6c5d5cdb66febd21e7a1f630ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/players/chris_player/Chris_Left_Walk_2.png"
-dest_files=["res://.godot/imported/Chris_Left_Walk_2.png-fed49be85093217b3be511742212c5fa.ctex"]
+source_file="res://characters/players/chris_player/character_select_sprite_frames/Chris_Front_Walk_1.png"
+dest_files=["res://.godot/imported/Chris_Front_Walk_1.png-d471ef6c5d5cdb66febd21e7a1f630ee.ctex"]
 
 [params]
 

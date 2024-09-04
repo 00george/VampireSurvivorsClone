@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx1qhw5m3pkrd"
-path="res://.godot/imported/Becky_1.png-db6b87cde638dfa8b036f097fa8b5cab.ctex"
+uid="uid://bj31p8hmoy04p"
+path="res://.godot/imported/Becky_0.png-108adf4d9ca4295db1ba7ae4a0ed1994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/players/becky_player/Becky_1.png"
-dest_files=["res://.godot/imported/Becky_1.png-db6b87cde638dfa8b036f097fa8b5cab.ctex"]
+source_file="res://characters/players/becky_player/character_select_sprite_frames/Becky_0.png"
+dest_files=["res://.godot/imported/Becky_0.png-108adf4d9ca4295db1ba7ae4a0ed1994.ctex"]
 
 [params]
 
