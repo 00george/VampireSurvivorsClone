@@ -12,7 +12,7 @@ script = ExtResource("1_ir3md")
 [node name="PlayerExp" parent="." instance=ExtResource("2_qv8s8")]
 
 [node name="PlayerHealth" parent="." instance=ExtResource("3_q557g")]
-MainMenuScenePath = "res://ui/menu.tscn"
+MainMenuScenePath = "res://levels/game.tscn"
 
 [node name="PlayerMovement" parent="." instance=ExtResource("4_n8wnn")]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://4wi28h32t1vv"]
 
-[ext_resource type="Script" path="res://ui/menu.gd" id="1_owqwh"]
+[ext_resource type="Script" path="res://ui/Menu.cs" id="1_oe5o6"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_owqwh")
+script = ExtResource("1_oe5o6")
 
 [node name="MainMenuMarginContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -44,6 +44,6 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../Options")
 text = "Exit"
 
-[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Start" to="." method="OnStartPressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Options" to="." method="OnOptionsPressed"]
+[connection signal="pressed" from="MainMenuMarginContainer/VBoxContainer/Exit" to="." method="OnExitPressed"]
